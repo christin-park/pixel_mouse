@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lectures | TAMU IEEE Game Controllers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lectures-style.css">
+    <script defer src="script.js"></script>
+    <link rel="icon" href="images/game-controller.png" type="image/x-icon">
+</head>
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <a href="https://ieee-tamu.org"><img class="ieee-image" src="images/title-logo.png"></a>
+        <a href="#" class="hambuger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navigation-links">
+            <ul>
+                <li class="test"><a href="index.html"><img src="images/home.png">Home</a></li>
+                <li><a href="getting-started.html"><img src="images/shuttle.png">Getting Started</a></li>
+                <li><a href="workshops.html"><img src="images/page.png">Workshops</a></li>
+                <li><a href="pixel-mouse.html"><img src="images/game-controller.png">Pixel Mouse</a></li>
+                <li><a href="teams.html"><img src="images/team.png">Teams</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--center everything within % of the screen-->
+    <div class="column-mid">&nbsp;
+        <!--go back button-->
+        <div class="go-back">
+            <a href="workshops.html">
+                <img class="arrow" src="images/back-arrow.png">
+                Go back
+            </a>
+        </div>
+        <!--header-->
+        <div class="lecture-container">
+            <div class="header-text">
+                <div class="orange-bar"></div>
+                <div class="header">
+                    <p class="lectures-header">Arduino Introduction</p>
+                    <p class="header-desc">
+                        Input vs. output, digital vs. analog, ohm's law, C++, hardware/digitalWrite/
+                        analogWrite implementation of an LED.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        
+        
+        <div class="lecture-info">
+            <iframe class="lecture-slides" src="slides/Arduino-Introduction.pdf"></iframe>
+            <!-- <iframe class="lecture-slides" src="sota.pdf"></iframe>
+            <div class="lecture-info-boxes">
+                <div class="one-lec">
+                    <p class="lec-info"><strong>Date: </strong> <span style="opacity: 0.7;">TBD</span></p>
+                    <p class="lec-info"><strong>Location: </strong><span style="opacity: 0.7;">TBD</span></p>
+                    <p class="lec-info"><strong>Speaker: </strong><span style="opacity: 0.7;">TBD</span></p>
+                </div>
+                <div class="one-lec" style="margin-top: 40px;">
+                    <p class="lec-info"><strong>Follow along with lectures: </strong></p><br>
+                    <a href="https://github.com/TAMU-IEEE" target="_blank"><img class="lecture-link-one" src="images/github-icon.png"></a>
+                <a href="https://drive.google.com/drive/folders/14seGSP3KqX5bVpiJHc99t_d5MNLbyuZg?usp=sharing" target="_blank"><img class="lecture-link-two" src="images/google-drive-icon.png"></a>
+                </div>
+            </div> -->
+        </div>  
+        <hr>
+        <div class="lecture-container">
+            <div class="header-text">
+                <div class="orange-bar"></div>
+                <div class="header">
+                    <p class="lectures-header">Assignment</p>
+                    <p class="header-desc">
+                        Blink the word “REV” in morse code using an LED! Everytime the word is blinked, flash a dimmed signal on a second LED.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="lecture-info">
+            <div class="video">
+                <video controls>
+                    <source src="videos/LEDWorkshop.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <iframe class="txt-code" src="code/LEDWorkshop.txt"></iframe>
+
+        </div>
+    </div>    
+
+    <!-- footer -->
+    <div class="footer">
+        <div>
+            <img class="ieee-image-footer" src="images/title-logo.png">
+        </div>
+        <div class="follow-us">
+            <p class="form-desc">Follow us:</p>
+            <div class="link-img">
+                <a href="https://ieee-tamu.org/" target="_blank"><img src="images/website-icon.png"></a>
+                <a href="https://www.instagram.com/ieee_tamu" target="_blank"><img src="images/instagram-icon.png"></a>
+                <a href="https://www.facebook.com/ieeetamu/" target="_blank"><img src="images/facebook-icon.png"></a>
+            </div>
+        </div>
+        <div class="last-info">
+            <p class="form-desc">
+                Want to sign up for updates? (This newsletter gives updates on all<br>
+                TAMU IEEE activities, so it is not specific to the game controllers project.)
+            </p>
+            <button class="newsletter-button"><a  href="https://ieee-tamu.org/join-now" target="_blank">Subscribe to our Newsletter</a></button>
+        </div>
+    </div>
+
+
+    
+</body>

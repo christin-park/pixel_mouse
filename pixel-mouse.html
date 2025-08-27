@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Mouse | TAMU IEEE Game Controllers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lectures-style.css">
+    <link rel="stylesheet" href="styles-mouse.css">
+    <script defer src="script.js"></script>
+    <link rel="icon" href="images/game-controller.png" type="image/x-icon">
+</head>
+<body>
+    <!--navigation bar-->
+    <nav class="navigation-bar">
+        <a href="https://ieee-tamu.org"><img class="ieee-image" src="images/title-logo-blue.png"></a>
+        <a href="#" class="hambuger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navigation-links">
+            <ul>
+                <li class="test"><a href="index.html">Home</a></li>
+                <li><a href="getting-started.html">Getting Started</a></li>
+                <li><a href="workshops.html">Workshops</a></li>
+                <li><a href="pixel-mouse.html">Pixel Mouse</a></li>
+                <li><a href="teams.html">Teams</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--intro to pixel mouse-->
+    <div class="mouse-main">
+        <div class="mouse-text">
+            <p class="mouse-text-title">PIXEL MOUSE</p>
+            <p class="mouse-text-desc">
+                Pixelmouse is a timed maze game coded to uniquely work with the game controllers'
+                button behavior.
+                It is possible to play the game with just implementing directional movement (WASD),
+                but there are other buttons that you can implement to help your team achieve a better time.
+                Teams will compete for the fastest average maze completion between 3 maze levels.
+            </p>
+            <a class="mouse-text-button" target="_blank" href="https://drive.google.com/drive/folders/1ZfcTPopa_GqLqVcBo-Qy3-dzw8I8M9-U?usp=sharing">Download Demo</a>
+        </div>
+        <div>
+            <img class="mouse-image" src="images/pixelMouseLarge.png">
+        </div>
+    </div>
+
+
+    <!--center everything within % of the screen-->
+    <div class="column-mid">&nbsp;
+        <nav class="pixel-navigation-bar">
+            <div class="pixel-navigation-links">
+                <ul>
+                    <li class="hidden-nav">Maze Hotkeys</li>
+                    <li class="hidden-nav">Button Behavior</li>
+                    <li class="hidden-nav">Maze Info</li>
+                </ul>
+            </div>
+        </nav>
+        <!--controls-->
+        <div class="pixel-container">
+            <p class="pixel-title">Maze Hotkeys</p>
+            <div class="row-hotkeys">
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/a-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">WASD : UP, LEFT, DOWN, RIGHT</p>
+                        <p class="hotkey-desc">
+                            Cardinal direction movement. Isn't it weird how hotkeyed is 
+                            not spelled hotkeid like how paid is paid and not payed?
+                        </p>
+                    </div>
+                </div>
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/j-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">J : JUMP</p>
+                        <p class="hotkey-desc">
+                            Allows you to jump over barriers.
+                            The jump duration is 1.4 seconds.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-hotkeys">
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/r-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">R : RESET #1</p>
+                        <p class="hotkey-desc">
+                            Reset the timer on your current run and spawn back
+                            to the beginning. This button only works once!
+                            (By implementing both 'R' and 'T', you can reset
+                            up to 2 times per run.)
+                        </p>
+                    </div>
+                </div>
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/t-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">T : RESET #2</p>
+                        <p class="hotkey-desc">
+                            Reset the timer on your current run and spawn back
+                            to the beginning. This button only works once!
+                            (By implementing both 'R' and 'T', you can reset
+                            up to 2 times per run.)
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row-hotkeys">
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/q-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">Q : TOGGLE ROTATION CCW</p>
+                        <p class="hotkey-desc">
+                            Toggle button that allows you to turn on and off
+                            a rotation setting. The rotation rate is 0.3 rev/sec.
+                            Useful to use with the 'F' key.
+                        </p>
+                    </div>
+                </div>
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/e-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">E : TOGGLE ROTATION CW</p>
+                        <p class="hotkey-desc">
+                            Toggle button that allows you to turn on and off
+                            a rotation setting. The rotation rate is 0.3 rev/sec.
+                            Useful to use with the 'F' key.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-hotkeys">
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/f-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">F : FORWARD KEY</p>
+                        <p class="hotkey-desc">
+                            Go forward based on your current direction.
+                            Useful to use with the 'Q' and 'E' keys.
+                        </p>
+                    </div>
+                </div>
+                <div class="one-hotkey">
+                    <img class="hotkey-img" src="images/u-key.png">
+                    <div class="hotkey-text">
+                        <p class="hotkey-title">U : SET SPAWNPOINT</p>
+                        <p class="hotkey-desc">
+                            Set your spawnpoint to your current location.
+                            This button only works once!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <!--maze levels-->
+        <div class="pixel-container">
+            <p class="pixel-title">Button Behavior</p>
+            <div class="button-behavior-container">
+                <div class="button-behavior-img">
+                    <img class="hotkey-img" src="images/a-key.png">
+                    <img class="hotkey-img" src="images/f-key.png">
+                </div>
+                <p>When the button is pressed, the character should be spammed.</p>
+            </div>
+            <div class="button-behavior-container">
+                <div class="button-behavior-img">
+                    <img class="hotkey-img" src="images/j-key.png">
+                </div>
+                <p>
+                    Everytime you press the button, the character should only register once
+                    (Otherwise, the jump mechanic would restart with every new instance of 'J').
+                </p>
+            </div>
+            <div class="button-behavior-container">
+                <div class="button-behavior-img">
+                    <img class="hotkey-img" src="images/r-key.png">
+                    <img class="hotkey-img" src="images/t-key.png">
+                    <img class="hotkey-img" src="images/u-key.png">
+                </div>
+                <p>
+                    When you press the button, the character should only register once.
+                    After the button is pressed once, it can not be triggered again.
+                    (Don't cheat by not setting a limit on the number of resets you can use! D:<)
+                </p>
+            </div>
+            <div class="button-behavior-container">
+                <div class="button-behavior-img">
+                    <img class="hotkey-img" src="images/q-key.png">
+                    <img class="hotkey-img" src="images/e-key.png">
+                </div>
+                <p>
+                    The button should be implemented as a toggle button. When it is pressed once, the
+                    rotation toggle begins. When it is pressed again, the rotation toggle ends.
+                </p>
+            </div>
+            <div class="white-space">&nbsp;</div>
+
+        </div>
+
+        <!--maze info-->
+        <div class="pixel-container">
+            <p class="pixel-title">Maze Info</p>
+            <p class="pixel-desc">
+                - There are 2 versions of the maze game. One of which is compatible with a traditional keyboard,
+                and the other being compatible with your arduino game controller. The reason why each
+                input device isn't compatible with the other's game is because the firmware is different.
+                In a traditional keyboard, when you hold down a button, it registers the character once, delays,
+                then spams the character. In your game controller, you will code it based on the button behavior
+                (see button behavior info). The keyboard-compatible demo helps you understand what the expected behavior should be.
+                <br><br><br>
+                - All gameplay will be completed with the game controller. There are portions of the game setup
+                (entering team name information, number of participating players, etc.) that require
+                a traditional mouse and keyboard, but the game controller won't be used to complete these actions. <br><br><br>
+
+            </p>
+
+            <div class="white-space">&nbsp;</div>   
+        </div>
+    </div> <!--end of mid col div-->
+
+    <!-- footer -->
+    <div class="footer">
+        <div>
+            <img class="ieee-image-footer" src="images/title-logo-blue.png">
+        </div>
+        <div class="follow-us">
+            <p class="form-desc">Follow us:</p>
+            <div class="link-img">
+                <a href="https://ieee-tamu.org/" target="_blank"><img src="images/website-icon-blue.png"></a>
+                <a href="https://www.instagram.com/ieee_tamu" target="_blank"><img src="images/instagram-icon-blue.png"></a>
+                <a href="https://www.facebook.com/ieeetamu/" target="_blank"><img src="images/facebook-icon-blue.png"></a>
+            </div>
+        </div>
+        <div class="last-info">
+            <p class="form-desc">
+                Want to sign up for updates? (This newsletter gives<br>updates on all
+                TAMU IEEE activities,<br>so it is not specific to the game controllers project.)
+            </p>
+            <button class="newsletter-button"><a  href="https://ieee-tamu.org/join-now" target="_blank">Subscribe to our Newsletter</a></button>
+        </div>
+        
+    </div>
+</body>
