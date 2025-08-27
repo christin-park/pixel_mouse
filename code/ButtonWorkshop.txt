@@ -1,0 +1,56 @@
+/*
+  Task: Program 2 buttons, one as a toggle button, the other as a push button. When they are a logical NOR, light up an LED. 
+*/
+int buttonPin1 = 10;
+int buttonPin2 = 11;
+int LEDPin = 6;
+
+int button1State;
+int button2Read;
+int prevButton2Read = 1;
+int LEDState = 0;
+
+void setup() {
+  pinMode(buttonPin1, INPUT);
+  pinMode(buttonPin2, INPUT);
+  pinMode(LEDPin, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  button1State = digitalRead(buttonPin1);
+  Serial.print("Button 1 state: ");
+  Serial.println(button1State);
+
+  button2Read = digitalRead(buttonPin2);
+  if (button2Read == 1 && prevButton2Read == 0) {
+    if (LEDState == 0) {
+      LEDState = 1;
+    }
+    else {
+      LEDState = 0;
+    }
+  }
+  Serial.print("Button 2 state: ");
+  Serial.println(LEDState);
+  prevButton2Read = button2Read;
+
+  /*if both button 1 and button 2 are 0 (digital NOR), then light up the LED
+    truth table:
+    button 1 | button 2 | output
+    0        | 0        | 1
+    0        | 1        | 0
+    1        | 0        | 0
+    1        | 1        | 0
+  */
+  if (button1State == 0 && LEDState == 0) {
+    digitalWrite(LEDPin, HIGH);
+  }
+  else {
+    digitalWrite(LEDPin, LOW);
+  }
+
+  Serial.println("");
+  delay(100);
+}

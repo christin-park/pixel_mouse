@@ -1,0 +1,68 @@
+/*
+  Task: Blink the word "REV" in morse code using an LED! Everytime the word is blinked,
+  flash a dimmed light signal on a second LED.
+*/
+int morsePin = 5;
+int blinkPin = 3;
+
+void setup() {
+  pinMode(morsePin, OUTPUT);
+  pinMode(blinkPin, OUTPUT);
+}
+
+void loop() {
+  blinkMessage("REV");
+
+  delay(250);
+  analogWrite(blinkPin, 50);
+  delay(250);
+  analogWrite(blinkPin, 0);
+  delay(250);
+}
+
+/*
+  This function is written to be compatible with other words (writing something other than "REV"
+  as a parameter). However, only cases 'R', 'E', and 'V' are written. (feel free to finish up the code!)
+*/
+void blinkMessage(String message) {
+  for (int i = 0; i < message.length(); i++) {
+    char character = message[i];
+    switch (character) {
+      case 'R':
+        blinkSymbol(".-.");
+        break;
+      case 'E':
+        blinkSymbol(".");
+        break;
+      case 'V':
+        blinkSymbol("...-");
+        break;
+    }
+
+    if (i < message.length() - 1) {
+      delay(250);
+    }
+  }
+}
+
+void blinkSymbol(String character) {
+  for (int i = 0; i < character.length(); i++) {
+    char symbolChar = character[i];
+    switch (symbolChar) {
+      case '.':
+        digitalWrite(morsePin, HIGH);
+        delay(250);
+        digitalWrite(morsePin, LOW);
+        break;
+      case '-':
+        digitalWrite(morsePin, HIGH);
+        delay(750);
+        digitalWrite(morsePin, LOW);
+        break;
+    }
+
+    if (i < character.length() - 1) {
+      delay(250);
+    }
+  }
+}

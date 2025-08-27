@@ -1,0 +1,44 @@
+/*
+  Task: Program an analog stick so that
+  its x component changes an LED into 3 stages of brightness,
+  and its y component changes another LED's brightness smoothly.
+*/
+
+int horizontalPin = A0;
+int verticalPin = A1;
+int LEDPin1 = 5;
+int LEDPin2 = 6;
+
+void setup() {
+  pinMode(verticalPin, INPUT);
+  pinMode(horizontalPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  //horizontal movement
+  /*
+    Break 1023 up into 3 stages of brightness
+    0, 341, 682, 1023
+  */
+  int horRead = analogRead(horizontalPin);
+  if (horRead > 0 && horRead <= 341) {
+    analogWrite(LEDPin1, 10);
+  }
+  else if (horRead > 341 && horRead <= 682) {
+    analogWrite(LEDPin1, 100);
+  }
+  else if (horRead > 682 && horRead <= 1023) {
+    analogWrite(LEDPin1, 255);
+  }
+
+  //vertical movement
+  int verRead = analogRead(verticalPin);
+  /*
+    Range of analogRead is 0 to 255
+    Range of analogWrite is 0 to 1023
+
+  */
+  float verWrite = verRead * (255.0/1023.0);
+  analogWrite(LEDPin2, verWrite);
+}
